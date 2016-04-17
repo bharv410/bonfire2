@@ -11,12 +11,17 @@ import Parse
 
 //https://makeapppie.com/tag/uipickerview-in-swift/
 
+protocol FlavorViewControllerDelegate: class {
+    func didFinishTask2(sender: FlavorViewController, choice: String)
+}
 
 class FlavorViewController: ViewController,UIPickerViewDataSource,UIPickerViewDelegate {
 @IBOutlet weak var flavorBackClick: UIButton!
     
     @IBOutlet weak var flavorPicker: UIPickerView!
     let pickerData = ["🍃","🔥","🍊","🍎","🍐","🍍","🍉","🍇","🍒"]
+    
+    weak var delegate:FlavorViewControllerDelegate?
     
     
     override func viewDidLoad() {
@@ -50,8 +55,17 @@ class FlavorViewController: ViewController,UIPickerViewDataSource,UIPickerViewDe
         return pickerData[row]
     }
     
+    
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        flavorBackClick.titleLabel!.text = pickerData[row]
+        self.delegate?.didFinishTask2(self , choice: pickerData[row] )
+        
+        
+        self.dismissViewControllerAnimated(true) {
+            
+            
+            
+        }
+        
     }
     
     //MARK: - Delegates and data sources

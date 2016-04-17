@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 protocol LocationTableViewControllerDelegate: class {
     func didFinishTask(sender: LocationTableViewController, choice: String)
@@ -14,7 +15,7 @@ protocol LocationTableViewControllerDelegate: class {
 
 class LocationTableViewController: UITableViewController {
     
-    var items: [String] = ["We", "Heart", "Swift"]
+    var items: [String] = []
     weak var delegate:LocationTableViewControllerDelegate?
     
     override func viewDidLoad() {
@@ -24,6 +25,20 @@ class LocationTableViewController: UITableViewController {
         self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
         
         self.tableView.contentInset = UIEdgeInsetsMake(20, 0, 0, 0)
+        
+        var query = PFQuery(className:"Locations")
+        
+        var data: Void? = query.findObjectsInBackgroundWithBlock({(objects:[PFObject]?, error:NSError?) -> Void in
+
+            
+            for object: PFObject in objects! {
+                
+                self.items.append(object["title"]as! (String))
+            }
+            self.tableView.reloadData()
+        })
+        
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 

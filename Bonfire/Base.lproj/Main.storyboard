@@ -21,12 +21,12 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IMD-6l-6la">
                                 <rect key="frame" x="26" y="332" width="322" height="53"/>
-                                <color key="backgroundColor" red="0.85302809319999995" green="0.15430687779999999" blue="0.30350834339999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.74901960784313726" green="0.15294117647058825" blue="0.30196078431372547" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="9Kr-b4-DjP"/>
                                     <constraint firstAttribute="width" constant="250" id="h1H-ie-Vr0"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="YanoneKaffeesatz-Regular" family="Yanone Kaffeesatz" pointSize="27"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="40"/>
                                 <state key="normal" title="Flavor">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -56,12 +56,12 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="UBD-ng-U4Q">
                                 <rect key="frame" x="26" y="332" width="322" height="53"/>
-                                <color key="backgroundColor" red="0.12850480750000001" green="0.76889347789999996" blue="0.37209143589999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.74901960784313726" green="0.15294117647058825" blue="0.30196078431372547" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="4Cv-oZ-cB3"/>
                                     <constraint firstAttribute="width" constant="250" id="auj-Bk-Ipi"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="YanoneKaffeesatz-Regular" family="Yanone Kaffeesatz" pointSize="27"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="40"/>
                                 <state key="normal" title="     Public     ">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -91,12 +91,12 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pBQ-sB-lJ9">
                                 <rect key="frame" x="26" y="332" width="322" height="53"/>
-                                <color key="backgroundColor" red="0.95697115379999997" green="0.92051148169999997" blue="0.070565344000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.74901960784313726" green="0.15294117647058825" blue="0.30196078431372547" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="d0P-pC-F8B"/>
                                     <constraint firstAttribute="height" constant="60" id="yCL-SX-U5p"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="YanoneKaffeesatz-Regular" family="Yanone Kaffeesatz" pointSize="27"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="40"/>
                                 <state key="normal" title="Location">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -124,29 +124,42 @@
                                     <segue destination="IkT-Vt-S0R" kind="show" id="pxW-h2-PZJ"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="at" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jC2-Ta-lV7">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="pBQ-sB-lJ9" firstAttribute="top" secondItem="jC2-Ta-lV7" secondAttribute="bottom" constant="16" id="0ci-0Z-J6z"/>
                             <constraint firstItem="UBD-ng-U4Q" firstAttribute="top" secondItem="IMD-6l-6la" secondAttribute="bottom" constant="50" id="9qv-Xw-VR7"/>
                             <constraint firstItem="pBQ-sB-lJ9" firstAttribute="top" secondItem="UBD-ng-U4Q" secondAttribute="bottom" constant="50" id="Ft8-rt-3Eu"/>
                             <constraint firstItem="IMD-6l-6la" firstAttribute="top" secondItem="Vyj-bp-qJi" secondAttribute="bottom" constant="66" id="I5n-gZ-Iy4"/>
                             <constraint firstItem="pBQ-sB-lJ9" firstAttribute="centerX" secondItem="wTJ-Yc-Lc5" secondAttribute="centerX" id="IV1-ce-dLe"/>
                             <constraint firstItem="IMD-6l-6la" firstAttribute="centerX" secondItem="wTJ-Yc-Lc5" secondAttribute="centerX" id="JGG-X2-PzG"/>
+                            <constraint firstItem="jC2-Ta-lV7" firstAttribute="centerX" secondItem="wTJ-Yc-Lc5" secondAttribute="centerX" id="Y5A-5B-VtB"/>
                             <constraint firstItem="UBD-ng-U4Q" firstAttribute="centerX" secondItem="wTJ-Yc-Lc5" secondAttribute="centerX" id="fKx-No-ofd"/>
+                            <constraint firstItem="jC2-Ta-lV7" firstAttribute="top" secondItem="UBD-ng-U4Q" secondAttribute="bottom" constant="13" id="jE1-iX-mIU"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="IMD-6l-6la"/>
                                 <exclude reference="UBD-ng-U4Q"/>
                                 <exclude reference="pBQ-sB-lJ9"/>
+                                <exclude reference="jC2-Ta-lV7"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="I5n-gZ-Iy4"/>
                                 <exclude reference="JGG-X2-PzG"/>
                                 <exclude reference="9qv-Xw-VR7"/>
                                 <exclude reference="fKx-No-ofd"/>
+                                <exclude reference="0ci-0Z-J6z"/>
                                 <exclude reference="Ft8-rt-3Eu"/>
                                 <exclude reference="IV1-ce-dLe"/>
+                                <exclude reference="Y5A-5B-VtB"/>
+                                <exclude reference="jE1-iX-mIU"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -154,19 +167,25 @@
                                 <include reference="IMD-6l-6la"/>
                                 <include reference="UBD-ng-U4Q"/>
                                 <include reference="pBQ-sB-lJ9"/>
+                                <include reference="jC2-Ta-lV7"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="I5n-gZ-Iy4"/>
                                 <include reference="JGG-X2-PzG"/>
                                 <include reference="9qv-Xw-VR7"/>
                                 <include reference="fKx-No-ofd"/>
+                                <include reference="0ci-0Z-J6z"/>
                                 <include reference="Ft8-rt-3Eu"/>
                                 <include reference="IV1-ce-dLe"/>
+                                <include reference="Y5A-5B-VtB"/>
+                                <include reference="jE1-iX-mIU"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="publicPrivateButton" destination="UBD-ng-U4Q" id="6b0-6X-g4C"/>
+                        <outlet property="flavorButton" destination="IMD-6l-6la" id="e7p-RN-cag"/>
+                        <outlet property="locationButton" destination="pBQ-sB-lJ9" id="Eav-kU-Idn"/>
+                        <outlet property="publicPrivateButton" destination="UBD-ng-U4Q" id="F53-hs-02T"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -215,7 +234,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flavor" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eYh-V5-gOd">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oBs-ph-se9">
@@ -246,13 +265,13 @@
                                 <exclude reference="9kt-Yq-fSC"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="d2C-lt-sR7"/>
+                                <exclude reference="kgS-hZ-TQK"/>
                                 <exclude reference="Jg4-17-Lob"/>
                                 <exclude reference="wzy-23-lhi"/>
                                 <exclude reference="cHP-hX-7Bc"/>
                                 <exclude reference="ksp-O1-nqy"/>
                                 <exclude reference="u4R-fP-bGA"/>
-                                <exclude reference="d2C-lt-sR7"/>
-                                <exclude reference="kgS-hZ-TQK"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -262,13 +281,13 @@
                                 <include reference="9kt-Yq-fSC"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="d2C-lt-sR7"/>
+                                <include reference="kgS-hZ-TQK"/>
                                 <include reference="Jg4-17-Lob"/>
                                 <include reference="wzy-23-lhi"/>
                                 <include reference="cHP-hX-7Bc"/>
                                 <include reference="ksp-O1-nqy"/>
                                 <include reference="u4R-fP-bGA"/>
-                                <include reference="d2C-lt-sR7"/>
-                                <include reference="kgS-hZ-TQK"/>
                             </mask>
                         </variation>
                     </view>
