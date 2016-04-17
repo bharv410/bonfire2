@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import MessageUI
 
-class ViewController: UIViewController, KCFloatingActionButtonDelegate {
+
+class ViewController: UIViewController, KCFloatingActionButtonDelegate, MFMessageComposeViewControllerDelegate {
 
     @IBOutlet weak var publicPrivateButton: UIButton!
     
@@ -86,24 +88,42 @@ class ViewController: UIViewController, KCFloatingActionButtonDelegate {
 
     func KCFABOpened(fab: KCFloatingActionButton) {
         
-        
-        let alert = UIAlertController(title: "Sent!", message: self.publicString.isEqual("Private") ? "Sent privately!" : "Sent publicly", preferredStyle: UIAlertControllerStyle.Alert)
-        
-        
-        alert.addAction(UIAlertAction(title: "Yay!", style: UIAlertActionStyle.Default, handler: { action in
-            fab.close()
+        if(self.publicString.isEqual("Private")
+            && MFMessageComposeViewController.canSendText()){
             
-        }))
-        
-        self.presentViewController(alert, animated: true, completion: {
-            fab.close()
-        })
-        
+            
+            
+            
+            let controller = MFMessageComposeViewController()
+                controller.body = self.flavorString + " at " + self.locationString
+                //controller.recipients = [phoneNumber.text]
+                controller.messageComposeDelegate = self
+            self.presentViewController(controller, animated: true, completion: {
+                fab.close()
+            })
+        }else{
+            let alert = UIAlertController(title: "Sent!", message: self.publicString.isEqual("Private") ? "Sent privately!" : "Sent publicly", preferredStyle: UIAlertControllerStyle.Alert)
+            
+            
+            alert.addAction(UIAlertAction(title: "Yay!", style: UIAlertActionStyle.Default, handler: { action in
+                fab.close()
+                
+            }))
+            
+            self.presentViewController(alert, animated: true, completion: {
+                fab.close()
+            })
+        }
     }
     
     func KCFABClosed(fab: KCFloatingActionButton) {
     }
     
+    
+    func messageComposeViewController(controller: MFMessageComposeViewController!, didFinishWithResult result: MessageComposeResult) {
+        //... handle sms screen actions
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
     
     @IBAction func publicClicked(sender: UIButton) {
     
