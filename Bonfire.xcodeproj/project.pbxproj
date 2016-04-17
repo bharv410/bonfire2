@@ -7,15 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA7D4D991CC2DCF9004D00E9 /* LocationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7D4D981CC2DCF9004D00E9 /* LocationTableViewController.swift */; };
+		FA7D4D9B1CC2E778004D00E9 /* FlavorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7D4D9A1CC2E778004D00E9 /* FlavorViewController.swift */; };
 		FAF51FDE1CBC81A700254CA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF51FDD1CBC81A700254CA4 /* AppDelegate.swift */; };
 		FAF51FE01CBC81A700254CA4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF51FDF1CBC81A700254CA4 /* ViewController.swift */; };
 		FAF51FE31CBC81A800254CA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAF51FE11CBC81A800254CA4 /* Main.storyboard */; };
 		FAF51FE61CBC81A800254CA4 /* Bonfire.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FAF51FE41CBC81A800254CA4 /* Bonfire.xcdatamodeld */; };
 		FAF51FE81CBC81A800254CA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAF51FE71CBC81A800254CA4 /* Assets.xcassets */; };
 		FAF51FEB1CBC81A800254CA4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAF51FE91CBC81A800254CA4 /* LaunchScreen.storyboard */; };
+		FAF520051CBC851E00254CA4 /* KCFloatingActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF520041CBC851E00254CA4 /* KCFloatingActionButton.swift */; };
+		FAF520071CBC855700254CA4 /* KCFloatingActionButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF520061CBC855700254CA4 /* KCFloatingActionButtonItem.swift */; };
+		FAF520091CBC858A00254CA4 /* KCFloatingActionButtonDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF520081CBC858A00254CA4 /* KCFloatingActionButtonDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA7D4D981CC2DCF9004D00E9 /* LocationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationTableViewController.swift; sourceTree = "<group>"; };
+		FA7D4D9A1CC2E778004D00E9 /* FlavorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlavorViewController.swift; sourceTree = "<group>"; };
 		FAF51FDA1CBC81A700254CA4 /* Bonfire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bonfire.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAF51FDD1CBC81A700254CA4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAF51FDF1CBC81A700254CA4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +31,9 @@
 		FAF51FE71CBC81A800254CA4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAF51FEA1CBC81A800254CA4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FAF51FEC1CBC81A800254CA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAF520041CBC851E00254CA4 /* KCFloatingActionButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KCFloatingActionButton.swift; sourceTree = "<group>"; };
+		FAF520061CBC855700254CA4 /* KCFloatingActionButtonItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KCFloatingActionButtonItem.swift; sourceTree = "<group>"; };
+		FAF520081CBC858A00254CA4 /* KCFloatingActionButtonDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KCFloatingActionButtonDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +66,9 @@
 		FAF51FDC1CBC81A700254CA4 /* Bonfire */ = {
 			isa = PBXGroup;
 			children = (
+				FAF520081CBC858A00254CA4 /* KCFloatingActionButtonDelegate.swift */,
+				FAF520061CBC855700254CA4 /* KCFloatingActionButtonItem.swift */,
+				FAF520041CBC851E00254CA4 /* KCFloatingActionButton.swift */,
 				FAF51FDD1CBC81A700254CA4 /* AppDelegate.swift */,
 				FAF51FDF1CBC81A700254CA4 /* ViewController.swift */,
 				FAF51FE11CBC81A800254CA4 /* Main.storyboard */,
@@ -63,6 +76,8 @@
 				FAF51FE91CBC81A800254CA4 /* LaunchScreen.storyboard */,
 				FAF51FEC1CBC81A800254CA4 /* Info.plist */,
 				FAF51FE41CBC81A800254CA4 /* Bonfire.xcdatamodeld */,
+				FA7D4D981CC2DCF9004D00E9 /* LocationTableViewController.swift */,
+				FA7D4D9A1CC2E778004D00E9 /* FlavorViewController.swift */,
 			);
 			path = Bonfire;
 			sourceTree = "<group>";
@@ -139,8 +154,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAF51FE01CBC81A700254CA4 /* ViewController.swift in Sources */,
+				FAF520071CBC855700254CA4 /* KCFloatingActionButtonItem.swift in Sources */,
 				FAF51FE61CBC81A800254CA4 /* Bonfire.xcdatamodeld in Sources */,
 				FAF51FDE1CBC81A700254CA4 /* AppDelegate.swift in Sources */,
+				FAF520091CBC858A00254CA4 /* KCFloatingActionButtonDelegate.swift in Sources */,
+				FAF520051CBC851E00254CA4 /* KCFloatingActionButton.swift in Sources */,
+				FA7D4D9B1CC2E778004D00E9 /* FlavorViewController.swift in Sources */,
+				FA7D4D991CC2DCF9004D00E9 /* LocationTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,6 +310,7 @@
 				FAF51FF11CBC81A800254CA4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
