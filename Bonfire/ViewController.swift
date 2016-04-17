@@ -48,23 +48,29 @@ class ViewController: UIViewController, KCFloatingActionButtonDelegate {
         label2?.minimumScaleFactor = 0.01
         label2?.adjustsFontSizeToFitWidth = true
         
-        let label3 = self.flavorButton?.titleLabel
-        label3?.minimumScaleFactor = 0.01
-        label3?.adjustsFontSizeToFitWidth = true
-
+        let imageName = "sayagata-400px.png"
+        let image = UIImage(named: imageName)
+        
+       self.view.backgroundColor = UIColor(patternImage: image!)
+        
+    
+        
     }
     
     func setViews(){
         if(!self.publicString.isEmpty){
-            self.publicPrivateButton.titleLabel?.text = "     " + self.publicString + "     "
+            //self.publicPrivateButton.titleLabel?.text = "     " + self.publicString + "     "
+            self.publicPrivateButton.setTitle("     " + self.publicString + "     ", forState: UIControlState.Normal)
         }
         
         if(!self.locationString.isEmpty){
-            self.locationButton.titleLabel?.text = self.locationString
+            //self.locationButton.titleLabel?.text = self.locationString
+            self.locationButton.setTitle(self.locationString, forState: UIControlState.Normal)
         }
         
         if(!self.flavorString.isEmpty){
-            self.flavorButton.titleLabel?.text = "     " + self.flavorString + "     "
+            //self.flavorButton.titleLabel?.text =  self.flavorString
+            self.flavorButton.setTitle(self.flavorString, forState: UIControlState.Normal)
         }
     }
     
@@ -80,7 +86,8 @@ class ViewController: UIViewController, KCFloatingActionButtonDelegate {
 
     func KCFABOpened(fab: KCFloatingActionButton) {
         
-        let alert = UIAlertController(title: "Sent!", message: "Sent", preferredStyle: UIAlertControllerStyle.Alert)
+        
+        let alert = UIAlertController(title: "Sent!", message: self.publicString.isEqual("Private") ? "Sent privately!" : "Sent publicly", preferredStyle: UIAlertControllerStyle.Alert)
         
         
         alert.addAction(UIAlertAction(title: "Yay!", style: UIAlertActionStyle.Default, handler: { action in
@@ -103,33 +110,34 @@ class ViewController: UIViewController, KCFloatingActionButtonDelegate {
         let alert = UIAlertController(title: "Public or private?", message: "Do you want to post this to everybody or only to select friends from your contact book?", preferredStyle: UIAlertControllerStyle.Alert)
         
         alert.addAction(UIAlertAction(title: "Public", style: UIAlertActionStyle.Default, handler: { action in
-            self.publicString = "public"
+            self.publicString = "Public"
             self.setViews()
             
         }))
         
         alert.addAction(UIAlertAction(title: "Private", style: UIAlertActionStyle.Default, handler: { action in
-            self.publicString = "private";
+            self.publicString = "Private";
             self.setViews()
         }))
         
         self.presentViewController(alert, animated: true, completion: {
-            self.setViews()
         })
     }
 
 }
+
+
 extension ViewController: FlavorViewControllerDelegate {
     func didFinishTask2(sender: FlavorViewController, choice: String) {
         self.flavorString = choice
-        self.flavorButton.titleLabel?.text = self.flavorString
+        self.setViews()
     }
 }
 
 extension ViewController: LocationTableViewControllerDelegate {
     func didFinishTask(sender: LocationTableViewController, choice: String) {
         self.locationString = choice
-        locationButton.titleLabel?.text = "     " + self.locationString + "     "
+        self.setViews()
     }
 }
 

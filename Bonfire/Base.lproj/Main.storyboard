@@ -3,8 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -131,7 +129,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" name="alternateSelectedControlTextColor" catalog="System" colorSpace="catalog"/>
                         <constraints>
                             <constraint firstItem="pBQ-sB-lJ9" firstAttribute="top" secondItem="jC2-Ta-lV7" secondAttribute="bottom" constant="16" id="0ci-0Z-J6z"/>
                             <constraint firstItem="UBD-ng-U4Q" firstAttribute="top" secondItem="IMD-6l-6la" secondAttribute="bottom" constant="50" id="9qv-Xw-VR7"/>
@@ -151,6 +149,8 @@
                                 <exclude reference="jC2-Ta-lV7"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="Y5A-5B-VtB"/>
+                                <exclude reference="jE1-iX-mIU"/>
                                 <exclude reference="I5n-gZ-Iy4"/>
                                 <exclude reference="JGG-X2-PzG"/>
                                 <exclude reference="9qv-Xw-VR7"/>
@@ -158,8 +158,6 @@
                                 <exclude reference="0ci-0Z-J6z"/>
                                 <exclude reference="Ft8-rt-3Eu"/>
                                 <exclude reference="IV1-ce-dLe"/>
-                                <exclude reference="Y5A-5B-VtB"/>
-                                <exclude reference="jE1-iX-mIU"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -170,6 +168,8 @@
                                 <include reference="jC2-Ta-lV7"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="Y5A-5B-VtB"/>
+                                <include reference="jE1-iX-mIU"/>
                                 <include reference="I5n-gZ-Iy4"/>
                                 <include reference="JGG-X2-PzG"/>
                                 <include reference="9qv-Xw-VR7"/>
@@ -177,8 +177,6 @@
                                 <include reference="0ci-0Z-J6z"/>
                                 <include reference="Ft8-rt-3Eu"/>
                                 <include reference="IV1-ce-dLe"/>
-                                <include reference="Y5A-5B-VtB"/>
-                                <include reference="jE1-iX-mIU"/>
                             </mask>
                         </variation>
                     </view>
@@ -231,68 +229,62 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flavor" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eYh-V5-gOd">
-                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oBs-ph-se9">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Back"/>
-                                <connections>
-                                    <action selector="clickedBack:" destination="aUE-Zh-0ML" eventType="touchUpInside" id="oZI-z1-3Hv"/>
-                                </connections>
-                            </button>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9kt-Yq-fSC">
                                 <rect key="frame" x="0.0" y="-216" width="320" height="216"/>
                             </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flavor" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eYh-V5-gOd">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="126.5" id="scH-4N-svt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="40"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="scH-4N-svt"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="scH-4N-svt"/>
+                                    </mask>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="oBs-ph-se9" firstAttribute="centerY" secondItem="eYh-V5-gOd" secondAttribute="centerY" id="Jg4-17-Lob"/>
-                            <constraint firstItem="eYh-V5-gOd" firstAttribute="top" secondItem="L4h-vP-D5L" secondAttribute="bottom" constant="8" id="cHP-hX-7Bc"/>
                             <constraint firstItem="9kt-Yq-fSC" firstAttribute="centerY" secondItem="9th-W0-kQB" secondAttribute="centerY" id="d2C-lt-sR7"/>
                             <constraint firstItem="9kt-Yq-fSC" firstAttribute="centerX" secondItem="9th-W0-kQB" secondAttribute="centerX" id="kgS-hZ-TQK"/>
-                            <constraint firstItem="eYh-V5-gOd" firstAttribute="top" secondItem="L4h-vP-D5L" secondAttribute="bottom" constant="8" id="ksp-O1-nqy"/>
+                            <constraint firstItem="9kt-Yq-fSC" firstAttribute="top" secondItem="eYh-V5-gOd" secondAttribute="bottom" constant="28" id="peH-kK-QmS"/>
                             <constraint firstItem="eYh-V5-gOd" firstAttribute="centerX" secondItem="9th-W0-kQB" secondAttribute="centerX" id="u4R-fP-bGA"/>
-                            <constraint firstItem="oBs-ph-se9" firstAttribute="leading" secondItem="9th-W0-kQB" secondAttribute="leadingMargin" id="wzy-23-lhi"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="eYh-V5-gOd"/>
-                                <exclude reference="oBs-ph-se9"/>
                                 <exclude reference="9kt-Yq-fSC"/>
+                                <exclude reference="eYh-V5-gOd"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="u4R-fP-bGA"/>
                                 <exclude reference="d2C-lt-sR7"/>
                                 <exclude reference="kgS-hZ-TQK"/>
-                                <exclude reference="Jg4-17-Lob"/>
-                                <exclude reference="wzy-23-lhi"/>
-                                <exclude reference="cHP-hX-7Bc"/>
-                                <exclude reference="ksp-O1-nqy"/>
-                                <exclude reference="u4R-fP-bGA"/>
+                                <exclude reference="peH-kK-QmS"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
-                                <include reference="eYh-V5-gOd"/>
-                                <include reference="oBs-ph-se9"/>
                                 <include reference="9kt-Yq-fSC"/>
+                                <include reference="eYh-V5-gOd"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="u4R-fP-bGA"/>
                                 <include reference="d2C-lt-sR7"/>
                                 <include reference="kgS-hZ-TQK"/>
-                                <include reference="Jg4-17-Lob"/>
-                                <include reference="wzy-23-lhi"/>
-                                <include reference="cHP-hX-7Bc"/>
-                                <include reference="ksp-O1-nqy"/>
-                                <include reference="u4R-fP-bGA"/>
+                                <include reference="peH-kK-QmS"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="flavorBackClick" destination="oBs-ph-se9" id="kR1-mO-4c0"/>
                         <outlet property="flavorPicker" destination="9kt-Yq-fSC" id="3Fm-5r-mdb"/>
                     </connections>
                 </viewController>

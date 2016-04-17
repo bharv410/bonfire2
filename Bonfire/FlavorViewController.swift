@@ -41,13 +41,7 @@ class FlavorViewController: ViewController,UIPickerViewDataSource,UIPickerViewDe
     
     @IBAction func clickedBack(sender: UIButton) {
         self.dismissViewControllerAnimated(true) { 
-            let testObject = PFObject(className: "TestObject")
-            testObject["foo"] = "bar"
-            testObject.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
-                
-                
-            }
-            
+                        
         }
     }
     
@@ -66,6 +60,26 @@ class FlavorViewController: ViewController,UIPickerViewDataSource,UIPickerViewDe
             
         }
         
+    }
+    
+    func pickerView(pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusingView view: UIView?) -> UIView {
+        var pickerLabel = view as! UILabel!
+        if view == nil {  //if no label there yet
+            pickerLabel = UILabel()
+            //color the label's background
+            //let hue = CGFloat(row)/CGFloat(pickerData.count)
+            pickerLabel.backgroundColor = UIColor.lightGrayColor()
+        }
+        let titleData = pickerData[row]
+        let myTitle = NSAttributedString(string: titleData, attributes: [NSFontAttributeName:UIFont(name: "Georgia", size: 26.0)!,NSForegroundColorAttributeName:UIColor.blackColor()])
+        pickerLabel!.attributedText = myTitle
+        pickerLabel!.textAlignment = .Center
+        return pickerLabel
+        
+    }
+    
+    func pickerView(pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
+        return 36.0
     }
     
     //MARK: - Delegates and data sources
