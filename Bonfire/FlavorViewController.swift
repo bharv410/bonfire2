@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 //https://makeapppie.com/tag/uipickerview-in-swift/
 
@@ -35,7 +36,12 @@ class FlavorViewController: ViewController,UIPickerViewDataSource,UIPickerViewDe
     
     @IBAction func clickedBack(sender: UIButton) {
         self.dismissViewControllerAnimated(true) { 
-            
+            let testObject = PFObject(className: "TestObject")
+            testObject["foo"] = "bar"
+            testObject.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
+                
+                
+            }
             
         }
     }
