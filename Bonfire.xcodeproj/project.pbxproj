@@ -12,6 +12,8 @@
 		FA7D4D9B1CC2E778004D00E9 /* FlavorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7D4D9A1CC2E778004D00E9 /* FlavorViewController.swift */; };
 		FA96664B1CC427AC005FA6EB /* ioslinen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA96664A1CC427AC005FA6EB /* ioslinen.jpg */; };
 		FA96664D1CC4282D005FA6EB /* sayagata-400px.png in Resources */ = {isa = PBXBuildFile; fileRef = FA96664C1CC4282D005FA6EB /* sayagata-400px.png */; };
+		FAADCFCE1CC685C2001E51C8 /* PostTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAADCFCD1CC685C2001E51C8 /* PostTableViewController.swift */; };
+		FAADCFD01CC685F9001E51C8 /* CampViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAADCFCF1CC685F9001E51C8 /* CampViewViewController.swift */; };
 		FAF51FDE1CBC81A700254CA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF51FDD1CBC81A700254CA4 /* AppDelegate.swift */; };
 		FAF51FE01CBC81A700254CA4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF51FDF1CBC81A700254CA4 /* ViewController.swift */; };
 		FAF51FE31CBC81A800254CA4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAF51FE11CBC81A800254CA4 /* Main.storyboard */; };
@@ -31,6 +33,8 @@
 		FA7D4D9A1CC2E778004D00E9 /* FlavorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlavorViewController.swift; sourceTree = "<group>"; };
 		FA96664A1CC427AC005FA6EB /* ioslinen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ioslinen.jpg; sourceTree = "<group>"; };
 		FA96664C1CC4282D005FA6EB /* sayagata-400px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sayagata-400px.png"; sourceTree = "<group>"; };
+		FAADCFCD1CC685C2001E51C8 /* PostTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewController.swift; sourceTree = "<group>"; };
+		FAADCFCF1CC685F9001E51C8 /* CampViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampViewViewController.swift; sourceTree = "<group>"; };
 		FAF51FDA1CBC81A700254CA4 /* Bonfire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bonfire.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAF51FDD1CBC81A700254CA4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAF51FDF1CBC81A700254CA4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +112,8 @@
 				FAF51FE41CBC81A800254CA4 /* Bonfire.xcdatamodeld */,
 				FA7D4D981CC2DCF9004D00E9 /* LocationTableViewController.swift */,
 				FA7D4D9A1CC2E778004D00E9 /* FlavorViewController.swift */,
+				FAADCFCD1CC685C2001E51C8 /* PostTableViewController.swift */,
+				FAADCFCF1CC685F9001E51C8 /* CampViewViewController.swift */,
 			);
 			path = Bonfire;
 			sourceTree = "<group>";
@@ -147,6 +153,7 @@
 				TargetAttributes = {
 					FAF51FD91CBC81A700254CA4 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 5RP2877EJ2;
 					};
 				};
 			};
@@ -238,8 +245,10 @@
 			files = (
 				FAF51FE01CBC81A700254CA4 /* ViewController.swift in Sources */,
 				FAF520071CBC855700254CA4 /* KCFloatingActionButtonItem.swift in Sources */,
+				FAADCFD01CC685F9001E51C8 /* CampViewViewController.swift in Sources */,
 				FAF51FE61CBC81A800254CA4 /* Bonfire.xcdatamodeld in Sources */,
 				FAF51FDE1CBC81A700254CA4 /* AppDelegate.swift in Sources */,
+				FAADCFCE1CC685C2001E51C8 /* PostTableViewController.swift in Sources */,
 				FAF520091CBC858A00254CA4 /* KCFloatingActionButtonDelegate.swift in Sources */,
 				FAF520051CBC851E00254CA4 /* KCFloatingActionButton.swift in Sources */,
 				FA7D4D9B1CC2E778004D00E9 /* FlavorViewController.swift in Sources */,
@@ -357,10 +366,14 @@
 			baseConfigurationReference = 2FFFDB70F864183DA386CF87 /* Pods-Bonfire.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Bonfire/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lounge215.bonfire.Bonfire;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -369,10 +382,14 @@
 			baseConfigurationReference = 3205C8E50AFF3BC6F4288A0B /* Pods-Bonfire.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Bonfire/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lounge215.bonfire.Bonfire;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

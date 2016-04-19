@@ -53,9 +53,9 @@ class ViewController: UIViewController, KCFloatingActionButtonDelegate, MFMessag
         let imageName = "sayagata-400px.png"
         let image = UIImage(named: imageName)
         
-       self.view.backgroundColor = UIColor(patternImage: image!)
+//       self.view.backgroundColor = UIColor(patternImage: image!)
         
-    
+    self.view.backgroundColor = UIColor.whiteColor()
         
     }
     

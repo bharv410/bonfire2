@@ -1,14 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="dvT-Ia-iLU">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
+        <!--Camp View View Controller-->
+        <scene sceneID="BWs-8c-crt">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="dvT-Ia-iLU" customClass="CampViewViewController" customModule="Bonfire" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gJF-5f-TbJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-390" y="239.25"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Bonfire" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="home" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="Bonfire" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Vyj-bp-qJi"/>
                         <viewControllerLayoutGuide type="bottom" id="Ul1-kB-VBp"/>
@@ -25,7 +33,7 @@
                                     <constraint firstAttribute="width" constant="250" id="h1H-ie-Vr0"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="40"/>
-                                <state key="normal" title="Flavor">
+                                <state key="normal" title="🍇 Flavor">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -60,7 +68,7 @@
                                     <constraint firstAttribute="width" constant="250" id="auj-Bk-Ipi"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="40"/>
-                                <state key="normal" title="     Public     ">
+                                <state key="normal" title="   📬 Public   ">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -87,6 +95,12 @@
                                     <action selector="publicClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nrh-tR-9t7"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="at" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jC2-Ta-lV7">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pBQ-sB-lJ9">
                                 <rect key="frame" x="26" y="332" width="322" height="53"/>
                                 <color key="backgroundColor" red="0.74901960784313726" green="0.15294117647058825" blue="0.30196078431372547" alpha="1" colorSpace="calibratedRGB"/>
@@ -95,7 +109,7 @@
                                     <constraint firstAttribute="height" constant="60" id="yCL-SX-U5p"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="40"/>
-                                <state key="normal" title="Location">
+                                <state key="normal" title="🇺🇸 Location">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -122,12 +136,6 @@
                                     <segue destination="IkT-Vt-S0R" kind="show" id="pxW-h2-PZJ"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="at" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jC2-Ta-lV7">
-                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" name="alternateSelectedControlTextColor" catalog="System" colorSpace="catalog"/>
                         <constraints>
@@ -145,8 +153,8 @@
                             <mask key="subviews">
                                 <exclude reference="IMD-6l-6la"/>
                                 <exclude reference="UBD-ng-U4Q"/>
-                                <exclude reference="pBQ-sB-lJ9"/>
                                 <exclude reference="jC2-Ta-lV7"/>
+                                <exclude reference="pBQ-sB-lJ9"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="Y5A-5B-VtB"/>
@@ -164,8 +172,8 @@
                             <mask key="subviews">
                                 <include reference="IMD-6l-6la"/>
                                 <include reference="UBD-ng-U4Q"/>
-                                <include reference="pBQ-sB-lJ9"/>
                                 <include reference="jC2-Ta-lV7"/>
+                                <include reference="pBQ-sB-lJ9"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="Y5A-5B-VtB"/>
@@ -188,6 +196,31 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--Post Table View Controller-->
+        <scene sceneID="jfU-xz-2On">
+            <objects>
+                <tableViewController storyboardIdentifier="posts" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fhi-JN-IG6" customClass="PostTableViewController" customModule="Bonfire" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="pQk-ZW-Zlg">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="dpb-d1-9pP">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dpb-d1-9pP" id="10U-wq-0U7">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="fhi-JN-IG6" id="vFl-ky-6zP"/>
+                            <outlet property="delegate" destination="fhi-JN-IG6" id="RsV-L3-vec"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="27r-1s-S1w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-213" y="877.5"/>
         </scene>
         <!--Location Table View Controller-->
         <scene sceneID="jCn-vA-CEp">
@@ -265,10 +298,10 @@
                                 <exclude reference="eYh-V5-gOd"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="u4R-fP-bGA"/>
                                 <exclude reference="d2C-lt-sR7"/>
                                 <exclude reference="kgS-hZ-TQK"/>
                                 <exclude reference="peH-kK-QmS"/>
+                                <exclude reference="u4R-fP-bGA"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -277,10 +310,10 @@
                                 <include reference="eYh-V5-gOd"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="u4R-fP-bGA"/>
                                 <include reference="d2C-lt-sR7"/>
                                 <include reference="kgS-hZ-TQK"/>
                                 <include reference="peH-kK-QmS"/>
+                                <include reference="u4R-fP-bGA"/>
                             </mask>
                         </variation>
                     </view>
