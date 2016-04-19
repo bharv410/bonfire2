@@ -8,7 +8,7 @@
 
 import UIKit
 import MessageUI
-
+import Parse
 
 class ViewController: UIViewController, KCFloatingActionButtonDelegate, MFMessageComposeViewControllerDelegate {
 
@@ -88,32 +88,54 @@ class ViewController: UIViewController, KCFloatingActionButtonDelegate, MFMessag
 
     func KCFABOpened(fab: KCFloatingActionButton) {
         
-        if(self.publicString.isEqual("Private")
-            && MFMessageComposeViewController.canSendText()){
-            
-            
-            
-            
-            let controller = MFMessageComposeViewController()
-                controller.body = self.flavorString + " at " + self.locationString
-                //controller.recipients = [phoneNumber.text]
-                controller.messageComposeDelegate = self
-            self.presentViewController(controller, animated: true, completion: {
-                fab.close()
-            })
-        }else{
-            let alert = UIAlertController(title: "Sent!", message: self.publicString.isEqual("Private") ? "Sent privately!" : "Sent publicly", preferredStyle: UIAlertControllerStyle.Alert)
-            
-            
-            alert.addAction(UIAlertAction(title: "Yay!", style: UIAlertActionStyle.Default, handler: { action in
-                fab.close()
+        var gameScore = PFObject(className: "TestObject")
+        gameScore.setObject(self.flavorString + " at " + self.locationString, forKey: "foo")
+        
+        
+        
+        gameScore.saveInBackgroundWithBlock {
+            (success: Bool, error: NSError?) -> Void in
+            if (success) {
                 
-            }))
-            
-            self.presentViewController(alert, animated: true, completion: {
-                fab.close()
-            })
+                let alert = UIAlertController(title: "Sent!", message: self.publicString.isEqual("Private") ? "Sent privately!" : "Sent publicly", preferredStyle: UIAlertControllerStyle.Alert)
+                
+                
+                alert.addAction(UIAlertAction(title: "Yay!", style: UIAlertActionStyle.Default, handler: { action in
+                    fab.close()
+                    
+                }))
+                
+                self.presentViewController(alert, animated: true, completion: {
+                    fab.close()
+                })
+                
+                
+                NSLog("Object created with id: (gameScore.objectId)")
+                
+                
+                // The object has been saved.
+            } else {
+                // There was a problem, check error.description
+            }
         }
+        
+        
+//        if(self.publicString.isEqual("Private")
+//            && MFMessageComposeViewController.canSendText()){
+//            
+//            
+//            
+//            
+//            let controller = MFMessageComposeViewController()
+//                controller.body = self.flavorString + " at " + self.locationString
+//                //controller.recipients = [phoneNumber.text]
+//                controller.messageComposeDelegate = self
+//            self.presentViewController(controller, animated: true, completion: {
+//                fab.close()
+//            })
+//        }else{
+//            
+//        }
     }
     
     func KCFABClosed(fab: KCFloatingActionButton) {
