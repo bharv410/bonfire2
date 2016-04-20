@@ -192,6 +192,7 @@
                         <outlet property="flavorButton" destination="IMD-6l-6la" id="e7p-RN-cag"/>
                         <outlet property="locationButton" destination="pBQ-sB-lJ9" id="Eav-kU-Idn"/>
                         <outlet property="publicPrivateButton" destination="UBD-ng-U4Q" id="F53-hs-02T"/>
+                        <segue destination="nJY-5Z-oCj" kind="show" identifier="GoToContax" id="sjr-zX-WGo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -202,12 +203,15 @@
             <objects>
                 <tableViewController storyboardIdentifier="posts" useStoryboardIdentifierAsRestorationIdentifier="YES" id="fhi-JN-IG6" customClass="PostTableViewController" customModule="Bonfire" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="pQk-ZW-Zlg">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="dpb-d1-9pP">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dpb-d1-9pP" id="10U-wq-0U7">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -324,6 +328,31 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v0q-Z3-eIA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1168.5" y="59.25"/>
+        </scene>
+        <!--Contaxt Table View Controller-->
+        <scene sceneID="PqE-du-Dxh">
+            <objects>
+                <tableViewController storyboardIdentifier="contaxt" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nJY-5Z-oCj" customClass="ContaxtTableViewController" customModule="Bonfire" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="c8F-xE-Vhi">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="bbq-4a-OCJ">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bbq-4a-OCJ" id="OLx-BP-wff">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="nJY-5Z-oCj" id="fUd-qp-q3g"/>
+                            <outlet property="delegate" destination="nJY-5Z-oCj" id="Omf-hT-gus"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7tt-52-Rll" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="732" y="-240"/>
         </scene>
     </scenes>
 </document>

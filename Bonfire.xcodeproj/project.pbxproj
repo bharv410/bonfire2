@@ -12,6 +12,7 @@
 		FA7D4D9B1CC2E778004D00E9 /* FlavorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7D4D9A1CC2E778004D00E9 /* FlavorViewController.swift */; };
 		FA96664B1CC427AC005FA6EB /* ioslinen.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FA96664A1CC427AC005FA6EB /* ioslinen.jpg */; };
 		FA96664D1CC4282D005FA6EB /* sayagata-400px.png in Resources */ = {isa = PBXBuildFile; fileRef = FA96664C1CC4282D005FA6EB /* sayagata-400px.png */; };
+		FAA82B861CC720BE001C842D /* ContaxtTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA82B851CC720BD001C842D /* ContaxtTableViewController.swift */; };
 		FAADCFCE1CC685C2001E51C8 /* PostTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAADCFCD1CC685C2001E51C8 /* PostTableViewController.swift */; };
 		FAADCFD01CC685F9001E51C8 /* CampViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAADCFCF1CC685F9001E51C8 /* CampViewViewController.swift */; };
 		FAF51FDE1CBC81A700254CA4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF51FDD1CBC81A700254CA4 /* AppDelegate.swift */; };
@@ -33,6 +34,7 @@
 		FA7D4D9A1CC2E778004D00E9 /* FlavorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlavorViewController.swift; sourceTree = "<group>"; };
 		FA96664A1CC427AC005FA6EB /* ioslinen.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ioslinen.jpg; sourceTree = "<group>"; };
 		FA96664C1CC4282D005FA6EB /* sayagata-400px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sayagata-400px.png"; sourceTree = "<group>"; };
+		FAA82B851CC720BD001C842D /* ContaxtTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContaxtTableViewController.swift; sourceTree = "<group>"; };
 		FAADCFCD1CC685C2001E51C8 /* PostTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewController.swift; sourceTree = "<group>"; };
 		FAADCFCF1CC685F9001E51C8 /* CampViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampViewViewController.swift; sourceTree = "<group>"; };
 		FAF51FDA1CBC81A700254CA4 /* Bonfire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bonfire.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,6 +116,7 @@
 				FA7D4D9A1CC2E778004D00E9 /* FlavorViewController.swift */,
 				FAADCFCD1CC685C2001E51C8 /* PostTableViewController.swift */,
 				FAADCFCF1CC685F9001E51C8 /* CampViewViewController.swift */,
+				FAA82B851CC720BD001C842D /* ContaxtTableViewController.swift */,
 			);
 			path = Bonfire;
 			sourceTree = "<group>";
@@ -246,6 +249,7 @@
 				FAF51FE01CBC81A700254CA4 /* ViewController.swift in Sources */,
 				FAF520071CBC855700254CA4 /* KCFloatingActionButtonItem.swift in Sources */,
 				FAADCFD01CC685F9001E51C8 /* CampViewViewController.swift in Sources */,
+				FAA82B861CC720BE001C842D /* ContaxtTableViewController.swift in Sources */,
 				FAF51FE61CBC81A800254CA4 /* Bonfire.xcdatamodeld in Sources */,
 				FAF51FDE1CBC81A700254CA4 /* AppDelegate.swift in Sources */,
 				FAADCFCE1CC685C2001E51C8 /* PostTableViewController.swift in Sources */,

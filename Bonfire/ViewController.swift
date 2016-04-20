@@ -88,6 +88,8 @@ class ViewController: UIViewController, KCFloatingActionButtonDelegate, MFMessag
 
     func KCFABOpened(fab: KCFloatingActionButton) {
         
+
+        
         var gameScore = PFObject(className: "TestObject")
         gameScore.setObject(self.flavorString + " at " + self.locationString, forKey: "foo")
         
@@ -96,22 +98,23 @@ class ViewController: UIViewController, KCFloatingActionButtonDelegate, MFMessag
         gameScore.saveInBackgroundWithBlock {
             (success: Bool, error: NSError?) -> Void in
             if (success) {
-                
-                let alert = UIAlertController(title: "Sent!", message: self.publicString.isEqual("Private") ? "Sent privately!" : "Sent publicly", preferredStyle: UIAlertControllerStyle.Alert)
-                
-                
-                alert.addAction(UIAlertAction(title: "Yay!", style: UIAlertActionStyle.Default, handler: { action in
-                    fab.close()
-                    
-                }))
-                
-                self.presentViewController(alert, animated: true, completion: {
-                    fab.close()
-                })
-                
-                
-                NSLog("Object created with id: (gameScore.objectId)")
-                
+                self.performSegueWithIdentifier("GoToContax", sender:self)
+//                
+//                let alert = UIAlertController(title: "Sent!", message: self.publicString.isEqual("Private") ? "Sent privately!" : "Sent publicly", preferredStyle: UIAlertControllerStyle.Alert)
+//                
+//                
+//                alert.addAction(UIAlertAction(title: "Yay!", style: UIAlertActionStyle.Default, handler: { action in
+//                    fab.close()
+//                    
+//                }))
+//                
+//                self.presentViewController(alert, animated: true, completion: {
+//                    fab.close()
+//                })
+//                
+//                
+//                NSLog("Object created with id: (gameScore.objectId)")
+//                
                 
                 // The object has been saved.
             } else {
